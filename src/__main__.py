@@ -1,6 +1,5 @@
 from autorun import run
 
-
 # There is a tuple of initial source of variable used when methods
 # starts and during its process.
 # VARS:
@@ -11,4 +10,5 @@ from autorun import run
 
 @run
 def main(args: list, env: dict, local: dict):
+    print("Hello", env.USER)
     ...

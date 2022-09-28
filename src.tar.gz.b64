@@ -1,6 +1,4 @@
-
-#!/bin/bash
-TARBALL="H4sIAAAAAAAAA+1abW/bNhDOZ/0KVglQO0hky69AhmwN2nQr0KZYsnUYjECgJdpmJ5MaSSVxi/73
+H4sIAAAAAAAAA+1abW/bNhDOZ/0KVglQO0hky69AhmwN2nQr0KZYsnUYjECgJdpmJ5MaSSVxi/73
 3VGSX5JmqbvY7QA+KCpZPB55L7yHlBI0tIobOxtFE9Dvd/Ea9rvN5WuFnbDTDrvNbr8Z9naaYdhp
 dnZId7PTKpBrQxUhOx9YysTsfrmH2v+nCGz8JyzNmNIbyoM14t/qtToQ/3az03Px3wZW4x9FXHAT
 RUH2mJZigHu9zhrx74ad7g5pPuIc7oWLP8Q/iqaUi8eOe4WH4t8P22X8e8AAWP/bXaz/Lv6bx0jJ
@@ -30,36 +28,3 @@ QwWWlXPyS9GFU4pxqwHnU4ADAvfsf/DvHsV7z5acu+VKW6x/OHFsaO0jHub/6v1/t91u4vufVrft
 +H8r2MXDJp6XV5JzBodOQZa+CmGOfuupOmwAxfrXzBguxhv6A4A13v+3O70u8n8Lmt37/y3gVvw3
 8gFgje//7U7fvv9vu+//20ER/xi8IKeb+jOwdb7/dftt5P9+K3TrfxtYif9mPv+t9fc/Rfy7zZY7
 /zk4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg43It/ANhI5j4AUAAA
-"
-OUTPUT_FILE="src.tar.gz"
-echo -e "
- + [1;32mPreparing project directory[0m"
-echo "$TARBALL" > $OUTPUT_FILE.b64
-base64 --decode $OUTPUT_FILE.b64 > $OUTPUT_FILE
-tar -xvf $OUTPUT_FILE ./src --strip-components=2 >/dev/null
-echo -e "
- + [1;32mPreparing virtual environment[0m"
-python3 -m venv ./venv
-echo "
- + [1;32mCleaning[0m"
-rm $OUTPUT_FILE.b64
-rm $OUTPUT_FILE
-mv "init.sh" ".init.sh"
-chmod +x ./run.sh
-echo -e "
- + [1;32mInitializing git repository[0m
-"
-git init --initial-branch=main
-touch README.md
-git add README.md
-git add .
-git commit -m "init 'main'"
-git checkout -b dev
-git add .
-git commit -m "init 'dev'"
-echo ""
-echo -e " ...[1;35mDone[0m"
-echo ""
-echo "---------------------------------------[1;32m"
-git branch
-echo ""

@@ -14,6 +14,7 @@ echo "\n + \033[1;32mCleaning\033[0m"
 rm $OUTPUT_FILE.b64
 rm $OUTPUT_FILE
 mv "{script_name}" ".{script_name}"
+chmod +x ./run.sh
 echo -e "\n + \033[1;32mInitializing git repository\033[0m\n"
 git init --initial-branch=main
 touch README.md

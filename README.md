@@ -4,5 +4,5 @@ Raw `https://raw.githubusercontent.com/grunwmar/project-template/main/init.sh`.
 
 Bash command to run `init.sh` from internet:
 ```bash
-sh -c "$(curl -s 'https://raw.githubusercontent.com/grunwmar/project-template/main/init.sh')"
+bash -c "$(curl -s 'https://raw.githubusercontent.com/grunwmar/project-template/main/init.sh')"
 ```

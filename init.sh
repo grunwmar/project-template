@@ -1,4 +1,5 @@
 
+#!/bin/bash
 TARBALL="H4sIAAAAAAAAA+1abW/bNhDOZ/0Kzi1QO8gUy7ZsIECABn0ZBrQp0A79EgQCLdE2O5kUSCqJN+y/
 746S/JZmqbfY64Z7vkgmj8d7491JcnhqTXp6tFd0AaNRjNdoFHfXrw2OokE/irtxf4DjUTTo9o5Y
 vF+xKpTWccPY0W8iF2rxMN1j8/9RhN7/M5EXwtg9xcEO/u8NewPwf787GJL/D4FN/yeJVNIlSVg8
@@ -39,7 +40,7 @@ echo "
  + [1;32mCleaning[0m"
 rm $OUTPUT_FILE.b64
 rm $OUTPUT_FILE
-mv "INIT.sh" ".INIT.sh"
+mv "init.sh" ".init.sh"
 echo -e "
  + [1;32mInitializing git repository[0m
 "

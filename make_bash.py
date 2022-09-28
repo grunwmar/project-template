@@ -1,6 +1,7 @@
 import os
-SCRIPT_NAME = "INIT.sh"
+SCRIPT_NAME = "init.sh"
 BASH_TEMPLATE ="""
+#!/bin/bash
 TARBALL="{targz64}"
 OUTPUT_FILE="src.tar.gz"
 echo -e "\n + \033[1;32mPreparing project directory\033[0m"
